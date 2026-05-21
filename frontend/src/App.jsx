@@ -28,10 +28,10 @@ import MyApplications from "./pages/jobseeker/MyApplications";
 /* EMPLOYER */
 import EmployerDashboard from "./pages/employer/EmployerDashboard";
 import JobPostingForm from "./pages/employer/JobPostingForm";
-import ManageJobs from "./pages/Employer/ManageJobs";
-import ApplicationViewer from "./pages/Employer/ApplicationViewer";
-import EmployerProfilePage from "./pages/Employer/EmployerProfilePage";
-import EditProfileDetails from "./pages/Employer/EditProfileDetails";
+import ManageJobs from "./pages/employer/ManageJobs";
+import ApplicationViewer from "./pages/employer/ApplicationViewer";
+import EmployerProfilePage from "./pages/employer/EmployerProfilePage";
+import EditProfileDetails from "./pages/employer/EditProfileDetails";
 
 /* ROUTES */
 import ProtectedRoute from "./routes/ProtectedRoute";
