@@ -11,9 +11,9 @@ import LandingPage from "./pages/public/LandingPage";
 import About from "./pages/public/About";
 import Contact from "./pages/public/Contact";
 
-import SignUp from "./pages/Auth/SignUp";
-import Login from "./pages/Auth/Login";
-import ForgotPassword from "./pages/Auth/ForgotPassword";
+import SignUp from "./pages/auth/SignUp";
+import Login from "./pages/auth/Login";
+import ForgotPassword from "./pages/auth/ForgotPassword";
 /* ADMIN */
 import AdminDashboardPage from "./pages/admin/AdminDashboard";
 import AdminManageUsers from "./pages/admin/ManageUsers";
@@ -26,8 +26,8 @@ import SavedJobs from "./pages/jobseeker/SavedJobs";
 import UserProfile from "./pages/jobseeker/UserProfile";
 import MyApplications from "./pages/jobseeker/MyApplications";
 /* EMPLOYER */
-import EmployerDashboard from "./pages/Employer/EmployerDashboard";
-import JobPostingForm from "./pages/Employer/JobPostingForm";
+import EmployerDashboard from "./pages/employer/EmployerDashboard";
+import JobPostingForm from "./pages/employer/JobPostingForm";
 import ManageJobs from "./pages/Employer/ManageJobs";
 import ApplicationViewer from "./pages/Employer/ApplicationViewer";
 import EmployerProfilePage from "./pages/Employer/EmployerProfilePage";
