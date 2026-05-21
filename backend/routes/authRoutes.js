@@ -106,7 +106,6 @@ router.put(
 // POST /api/auth/upload-image
 router.post(
   "/upload-image",
-  protect,
   upload.single("image"),
 
   async (req, res) => {
