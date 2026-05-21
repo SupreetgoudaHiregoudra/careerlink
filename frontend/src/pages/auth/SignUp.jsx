@@ -230,13 +230,13 @@ const SignUp = () => {
         response.data;
 
       if (token) {
-        login(response.data, token);
+        login(response.data.user, token);
 
-        const targetPath =
-          response?.data?.role ===
-          "employer"
-            ? "/employer-dashboard"
-            : "/find-jobs";
+       const targetPath =
+  response?.data?.user?.role ===
+  "employer"
+    ? "/employer-dashboard"
+    : "/find-jobs";
 
         setTimeout(() => {
           navigate(targetPath, {
