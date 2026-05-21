@@ -168,11 +168,12 @@ router.post(
         );
 
         const baseUrl =
-          process.env
-            .PUBLIC_BACKEND_URL ||
-          `${req.protocol}://${req.get(
-            "host"
-          )}`;
+  process.env
+    .PUBLIC_BACKEND_URL?.replace(
+      "http://",
+      "https://"
+    ) ||
+  `https://${req.get("host")}`;
 
         return res.status(200).json({
           success: true,
@@ -214,11 +215,12 @@ router.post(
           );
 
           const baseUrl =
-            process.env
-              .PUBLIC_BACKEND_URL ||
-            `${req.protocol}://${req.get(
-              "host"
-            )}`;
+  process.env
+    .PUBLIC_BACKEND_URL?.replace(
+      "http://",
+      "https://"
+    ) ||
+  `https://${req.get("host")}`;
 
           return res.status(200).json({
             success: true,
