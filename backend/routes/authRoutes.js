@@ -2,7 +2,7 @@ const express = require("express");
 const fs = require("fs");
 const path = require("path");
 const mongoose = require("mongoose");
-
+const User = require("../models/User");
 const {
   register,
   login,
@@ -350,6 +350,49 @@ router.get(
   }
 );
 
+// =========================================
+// DELETE RESUME
+// =========================================
+
+router.delete(
+  "/resume",
+  protect,
+  async (req, res) => {
+    try {
+      const user = await User.findById(
+        req.user._id
+      );
+
+      if (!user) {
+        return res.status(404).json({
+          success: false,
+          message: "User not found",
+        });
+      }
+
+      user.resume = "";
+
+      await user.save();
+
+      res.status(200).json({
+        success: true,
+        message:
+          "Resume deleted successfully",
+      });
+    } catch (error) {
+      console.error(
+        "Delete Resume Error:",
+        error
+      );
+
+      res.status(500).json({
+        success: false,
+        message:
+          "Failed to delete resume",
+      });
+    }
+  }
+);
 // =========================================
 // Export Router
 // =========================================
